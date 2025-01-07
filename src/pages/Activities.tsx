@@ -8,8 +8,8 @@ const Activities = () => {
           <div className="space-y-6">
             <div className="aspect-video rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1452378174528-3090a4bba7b2" 
-                alt="Horses at the ranch"
+                src="https://images.unsplash.com/photo-1465379944081-7f47de8d74ac" 
+                alt="Cattle ranching"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -58,8 +58,8 @@ const Activities = () => {
           <div className="p-6 border rounded-lg">
             <div className="aspect-video rounded-lg overflow-hidden mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1452378174528-3090a4bba7b2" 
-                alt="Horses at the ranch"
+                src="https://images.unsplash.com/photo-1465379944081-7f47de8d74ac" 
+                alt="Cattle ranching"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
