@@ -34,7 +34,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-serif font-bold">
-            Grand Hotel
+            Hotel Victoria
           </Link>
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map(({ path, label, icon: Icon }) => (
