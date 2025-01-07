@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Info, Calendar, Utensils, Activity, Hotel } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,12 +14,12 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { path: '/', label: 'Home', icon: Home },
-    { path: '/about', label: 'About', icon: Info },
-    { path: '/bookings', label: 'Bookings', icon: Calendar },
-    { path: '/dining', label: 'Dining', icon: Utensils },
-    { path: '/activities', label: 'Activities', icon: Activity },
-    { path: '/services', label: 'Services', icon: Hotel },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/bookings', label: 'Bookings' },
+    { path: '/dining', label: 'Dining' },
+    { path: '/activities', label: 'Activities' },
+    { path: '/services', label: 'Services' },
   ];
 
   return (
@@ -37,7 +36,7 @@ const Navigation = () => {
             Hotel Victoria
           </Link>
           <div className="hidden md:flex items-center space-x-1">
-            {navItems.map(({ path, label, icon: Icon }) => (
+            {navItems.map(({ path, label }) => (
               <Link
                 key={path}
                 to={path}
@@ -45,10 +44,7 @@ const Navigation = () => {
                   location.pathname === path ? 'text-primary' : ''
                 }`}
               >
-                <span className="flex items-center gap-2">
-                  <Icon className="w-4 h-4" />
-                  {label}
-                </span>
+                {label}
               </Link>
             ))}
           </div>
