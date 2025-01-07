@@ -25,8 +25,7 @@ const Home = () => {
               Experience Luxury & Comfort
             </h1>
             <p className="text-lg text-white/90 mb-8">
-              Discover the perfect blend of elegance and hospitality at our
-              prestigious location.
+              Experience authentic Texas hospitality in our luxurious ranch-style boutique hotel just outside of Victoria
             </p>
             <button className="bg-white text-foreground px-8 py-3 rounded hover:bg-primary hover:text-white transition-colors duration-300">
               Book Your Stay
