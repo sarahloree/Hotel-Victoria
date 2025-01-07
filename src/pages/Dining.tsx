@@ -1,16 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Dining = () => {
   const navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
 
   const handleReservation = () => {
     navigate("/bookings", { 
       state: { 
         source: "dining",
         defaultValues: {
-          roomType: "deluxe" // Set a default room type for dining guests
+          roomType: "deluxe"
         }
       } 
     });
@@ -47,7 +50,7 @@ const Dining = () => {
             craft each dish using locally-sourced ingredients, ensuring both
             quality and authenticity.
           </p>
-          <Button size="lg" onClick={handleReservation}>View Menu</Button>
+          <Button size="lg" onClick={() => setShowMenu(true)}>View Menu</Button>
         </div>
 
         {/* Features */}
@@ -101,6 +104,78 @@ const Dining = () => {
           <Button size="lg" onClick={handleReservation}>Book Online</Button>
         </div>
       </div>
+
+      {/* Menu Dialog */}
+      <Dialog open={showMenu} onOpenChange={setShowMenu}>
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-serif text-center mb-6">La Victoriana Menu</DialogTitle>
+          </DialogHeader>
+          
+          {/* Starters */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-serif mb-4">Starters</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h4 className="font-medium">Texas Quail</h4>
+                  <p className="text-sm text-muted-foreground">Grilled quail with jalapeño honey glaze</p>
+                </div>
+                <span className="font-medium">$18</span>
+              </div>
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h4 className="font-medium">Gulf Shrimp Cocktail</h4>
+                  <p className="text-sm text-muted-foreground">Served with house-made cocktail sauce</p>
+                </div>
+                <span className="font-medium">$22</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Courses */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-serif mb-4">Main Courses</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h4 className="font-medium">Prime Ribeye</h4>
+                  <p className="text-sm text-muted-foreground">16oz Texas-raised beef, herb butter</p>
+                </div>
+                <span className="font-medium">$58</span>
+              </div>
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h4 className="font-medium">Redfish on the Half Shell</h4>
+                  <p className="text-sm text-muted-foreground">Lemon butter sauce, grilled vegetables</p>
+                </div>
+                <span className="font-medium">$42</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Desserts */}
+          <div>
+            <h3 className="text-2xl font-serif mb-4">Desserts</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h4 className="font-medium">Pecan Pie</h4>
+                  <p className="text-sm text-muted-foreground">Bourbon caramel sauce, vanilla ice cream</p>
+                </div>
+                <span className="font-medium">$12</span>
+              </div>
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h4 className="font-medium">Texas Sheet Cake</h4>
+                  <p className="text-sm text-muted-foreground">Rich chocolate cake with pecans</p>
+                </div>
+                <span className="font-medium">$10</span>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
