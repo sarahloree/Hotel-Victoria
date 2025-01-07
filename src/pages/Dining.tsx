@@ -1,7 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const Dining = () => {
+  const navigate = useNavigate();
+
+  const handleReservation = () => {
+    navigate("/bookings", { 
+      state: { 
+        source: "dining",
+        defaultValues: {
+          roomType: "deluxe" // Set a default room type for dining guests
+        }
+      } 
+    });
+  };
+
   return (
     <div className="page-transition min-h-screen bg-background">
       {/* Hero Section */}
@@ -33,7 +47,7 @@ const Dining = () => {
             craft each dish using locally-sourced ingredients, ensuring both
             quality and authenticity.
           </p>
-          <Button size="lg">View Menu</Button>
+          <Button size="lg" onClick={handleReservation}>View Menu</Button>
         </div>
 
         {/* Features */}
@@ -84,7 +98,7 @@ const Dining = () => {
           <Button size="lg" variant="secondary" className="mr-4">
             Call to Reserve
           </Button>
-          <Button size="lg">Book Online</Button>
+          <Button size="lg" onClick={handleReservation}>Book Online</Button>
         </div>
       </div>
     </div>
