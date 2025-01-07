@@ -58,8 +58,8 @@ const Activities = () => {
           <div className="p-6 border rounded-lg">
             <div className="aspect-video rounded-lg overflow-hidden mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1465379944081-7f47de8d74ac" 
-                alt="Cattle ranching"
+                src="https://images.unsplash.com/photo-1452378174528-3090a4bba7b2" 
+                alt="Rodeo horses"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
