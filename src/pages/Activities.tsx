@@ -32,8 +32,8 @@ const Activities = () => {
           <div className="space-y-6">
             <div className="aspect-video rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027" 
-                alt="Wildlife viewing"
+                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21" 
+                alt="Gulf Coast beach"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
