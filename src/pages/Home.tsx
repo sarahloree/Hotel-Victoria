@@ -10,8 +10,8 @@ const Home = () => {
       <section className="relative h-screen">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80"
-            alt="Luxury hotel exterior"
+            src="/lovable-uploads/3ec2fd23-beb3-4d57-b278-9ed7cdd39d2d.png"
+            alt="Luxury Mediterranean courtyard with fountain and outdoor seating"
             className="w-full h-full object-cover animate-fade-in"
           />
           <div className="absolute inset-0 bg-black/30" />
