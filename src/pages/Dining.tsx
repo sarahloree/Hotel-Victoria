@@ -5,8 +5,13 @@ const Dining = () => {
   return (
     <div className="page-transition min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="relative h-[60vh] bg-gradient-to-r from-neutral-900 to-neutral-800">
-        <div className="absolute inset-0 bg-black/50" />
+      <div className="relative h-[60vh]">
+        <img
+          src="/lovable-uploads/0697b144-8772-4055-bbc0-eb83bec901b3.png"
+          alt="La Victoriana restaurant with elegant table settings and pool view"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="container relative h-full flex flex-col justify-center items-center text-white text-center">
           <h1 className="text-5xl md:text-6xl font-serif mb-4">La Victoriana</h1>
           <p className="text-xl md:text-2xl max-w-2xl mx-auto">
