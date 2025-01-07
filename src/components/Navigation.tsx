@@ -32,15 +32,8 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <img
-              src="/lovable-uploads/0697b144-8772-4055-bbc0-eb83bec901b3.png"
-              alt="Hotel Victoria Logo"
-              className="h-8 w-auto"
-            />
-            <span className="text-3xl font-serif font-bold">
-              Hotel Victoria
-            </span>
+          <Link to="/" className="text-3xl font-serif font-bold">
+            Hotel Victoria
           </Link>
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map(({ path, label }) => (
